@@ -58,3 +58,23 @@ function rotateHeadlines() {
 // Start the rotation
 setInterval(rotateHeadlines, 6000);
 
+// Add this to your script.js file
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all navigation buttons
+    const startLearningBtn = document.querySelector('.cta-button');
+    const getStartedBtn = document.querySelector('.submit-button');
+
+    // Add click event listeners
+    const navigateToSAT = (e) => {
+        e.preventDefault();
+        window.location.href = '/static/sat/index.html';
+    };
+
+    if (startLearningBtn) {
+        startLearningBtn.addEventListener('click', navigateToSAT);
+    }
+
+    if (getStartedBtn) {
+        getStartedBtn.addEventListener('click', navigateToSAT);
+    }
+});
